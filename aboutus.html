@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVTEcH/aboutus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <style>
+
+
+/*about start */
+
+#aboutus{
+text-align: center;
+}
+  
+  #slideshow{
+
+    display: flex;
+    gap:20px;
+    text-align: left;
+    margin-left: 50px;
+  }
+
+  @media only screen and (max-width: 800px) {
+  #slideshow{
+    display: block;
+    width: 100%;
+    margin: 6px 0;
+  }
+  .texting > h2,p{
+    font-size: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+  /* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,{font-size: 11px}
+}
+
+.texting{
+  width: 650px;
+  font-size: 15px;
+}
+
+
+      h4{
+        text-align: center;
+        color: #003769;
+        font-size: 40px;
+        margin-bottom: 20px;
+       }
+    
+
+/*about end */
+
+    </style>
+
+</head>
+<body>
+    
+<div id="aboutus">
+
+    <h4 id="h4" align="center">  About US </h4>
+    <br>
+    <div class="text">
+    
+    <div id="slideshow">
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+     <a target="_blank" href="images/image1.jpg"> <img src="images/image1.jpg" style="width:100%"></a>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+     <a target="_blank" href="images/image2.jpg"> <img src="images/image2.jpg" style="width:100%"></a>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <a target="_blank" href="images/image3.jpg"><img src="images/image3.jpg" style="width:100%"></a>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <div class="texting">
+    <h2> About Servico </h2>
+    <p> Change is a constant feature of software development. All projects have their main objective to change something. A system or its parts are upgraded, fixed, or replaced, presumably to provide better or greater functionality, ease of use, reduction of operating expenses, etc.; however, change is not universally being and must be controlled in its introduction to a Support Business.
+    </p>
+    <p>
+    Central Support Application MANTRA SERVICO is a web-based tool developed for use by Internal Mantra department and it gives you the capabilities to generate and track the complaint regarding the devices supplied by Mantra, providing an open field of opportunity to the customers. It also allows you to monitor the total number of complaints received in particular regions and also track those complaints with its details, This application allows you to register complaints and track those state wise and district wise also Customer will get the regular update on the raised ticket via mail. </p>
+    <p align="center"><a href="index.html" style="text-decoration: none;  font-size: 15px; background-color:#ffcb36; color: black; border-radius: 5px; padding: 3px 15px; font-family: 'Bruno Ace SC', cursive ; ">GO TO HOME</a> </p></div>
+    </div>
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    </div>
+    
+    
+     <!--about us end--> 
+    
+</body>
+</html>

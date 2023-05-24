@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> payment</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+   <link rel="stylesheet" href="paypayment.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+
+<script src="cities.js"></script>
+ 
+</head>
+
+<body>
+    <div class="container">
+    <form action="https://sheetdb.io/api/v1/si5q1ivcwlwwc" method="post" id="sheetdb-form">            
+    <div class="detailform">
+        <h2 align="center" style="color: #ffcb36; text-shadow: 1px 1px 40px black; font-family: 'Bruno Ace SC', cursive ; font-size:25px;"> Payment </h2>
+<div class="twopart">
+
+    <div class="part1">
+     <p>
+         Name  <br><input type = "text" placeholder="Your name" name = "data[fname]" required>
+  </p>
+   <p>
+         Mobile number <br><input type = "text"  maxlength="10" placeholder="Mobile number" name = "data[mnumber]" required>
+  </p>
+  <p>
+         Email Id <br><input type = "email" placeholder="Email ID" name = "data[emailid]" required>
+  </p>
+  <p>
+        Company Name <br><input type = "text" placeholder="Company name" name = "data[cname]" required>
+  </p>
+  <p>
+         Company GST No. <br><input type = "text" placeholder="Company GST No." name = "data[cgno]" >
+  </p>
+  <p>
+       Application Name <br> <input type = "text" placeholder="Application Name" name = "data[aname]" required>
+  </p>
+  <p>
+      Device Serial Number <br><input type = "text" maxlength="7" placeholder="Serial Number" name = "data[srno]" required>
+  </p>
+
+   <p style="color: #ffcb90; font-weight: bold; font-size: 10px; padding: 15px 20px;" >
+         <input type = "radio" onclick="changeValue1()" name = "data[Gender]" value = "withoutwarranty" > For One Year RD Subscription (Rs. 100)
+         <br><input type = "radio" onclick="changeValue2()" name = "data[Gender]" value = "Warranty" > For One Year RD Subscription + Warranty (Rs. 250)
+</p>
+ </div>
+   <div class="part2">
+<p>
+Amount <br><input type = "text" placeholder="Amount" name = "data[amount]" id="textField1" required>
+</p>
+ 
+<p>
+GST (%) <br><input type = "text" placeholder="18%" name = "data[gst]" id="textField2" required>
+</p>
+ 
+<p>
+Total Amount <br><input type = "text" placeholder="Total Amount" name = "data[tamount]" id="textField3" required>
+</p>
+
+ <p>
+Country <br><input type = "text" placeholder="Country" name = "data[country]" value="India(91) (IN/IND)">
+</p>
+
+<p>
+State<br><select onchange="print_city('state', this.selectedIndex);" id="sts" name ="data[stt]" class="form-control" required></select>
+</p>
+
+<p>
+City<br><select id ="state" name="data[city]" class="form-control" required></select>
+</p>
+
+<script language="javascript" >print_state("sts");</script>
+
+<p>
+Postal Address <br><textarea name ="data[aadress]" placeholder="your aadress" style=" width: 15rem; height: 40px; font-weight: bold; color: black; border:1px solid white;"></textarea>
+</p>
+
+<p>
+Pincode <br><input type = "text" maxlength="6" placeholder="Pincode" name = "data[pincode]" required>
+</p>
+
+    </div>
+</div>
+ <div class="part3">
+     <p align="center"> <input type="submit" class="button-23" role="button" value="Submit"></p>
+     <p align="right" style="font-size: 15px;" > Click here <i class="fa fa-angle-double-down" aria-hidden="true"></i> </p>
+     <p align="right"><a href="index.html" style="text-decoration: none; font-size: 10px; background-color:#ffcb36; color: black; border-radius: 5px; padding: 3px 15px; font-family: 'Bruno Ace SC', cursive ; "> GO TO HOME</a></p>
+</div>
+</div>
+</form>
+</div>
+<script type="text/javascript">
+function changeValue1() {
+  textField = document.getElementById("textField1");
+  textField.value = "100";
+  textField = document.getElementById("textField2");
+  textField.value = "18%";
+  textField = document.getElementById("textField3");
+  textField.value = "118";
+}
+function changeValue2() {
+  textField = document.getElementById("textField1");
+  textField.value = "250";
+  textField = document.getElementById("textField2");
+  textField.value = "18%";
+  textField = document.getElementById("textField3");
+  textField.value = "295";
+}
+</script>
+
+
+<script> var form = document.getElementById('sheetdb-form'); form.addEventListener("submit", e => { e.preventDefault(); fetch(form.action, { method : "POST", body: new FormData(document.getElementById("sheetdb-form")), }).then( response => response.json() ).then((html) => {window.open('paypayment.html','_blank'); }); }); </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+
+}
+
+body{
+       background: linear-gradient(to left, rgba(500, 122, 300,0.7), rgba(89, 122, 300,0.2)), url("images/paymentbg.jpg");
+       background-repeat: no-repeat;
+    background-size: cover;
+   
+
+}
+
+.container{
+    display: flex;
+    text-shadow: 1px 1px 90px black;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Source Serif Pro', serif;
+    color: whitesmoke;
+
+}
+
+
+.detailform{
+background-color: transparent;
+   margin: 25px 25px;
+    padding: 15px 0px;
+    width: auto;
+   height: auto;
+   box-shadow: rgba(0, 0, 0, 0.56) 5px 22px 70px 25px;
+  
+}
+
+
+
+.twopart{
+    display: flex;
+
+    flex-wrap: wrap;
+       align-content: center;
+justify-content: center}
+ 
+
+
+ p{
+font-weight: bold;
+    padding: 5px 20px;
+ }
+
+select{
+
+
+border: 1px solid whitesmoket;
+color: black;
+font-weight: bold; 
+width: 15.3rem;
+cursor: pointer;
+}
+
+input[type="radio"]{
+width: auto;
+border: 2px solid white;
+
+}
+input{
+    width:15rem ;
+
+ color:black;
+ font-weight: bold;
+ border:1px solid whitesmoke;
+
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.button-23 {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 15px;
+  outline: none;
+  padding: 2px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  border-color: white;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: white;
+  cursor: not-allowed;
+  opacity: 1;
+}
+

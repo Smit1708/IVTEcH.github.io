@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> IVTEcH</title>
+	<link rel="stylesheet" type="text/css" href="IVTEcH.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+
+</head>
+<body id="body">
+
+<header>
+<h2> <img src="images/logo.png" width="100px"></h2>
+</header>
+
+
+ <!--navbar start--> 
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"><i class="fa fa-home" style="padding-right: 5px;" ></i>Home</a>
+  <a href="#aboutus"><i class="fa fa-user" style="padding-right: 5px;"></i>About US</a>
+  <a href="payment.html"><i class="fa fa-credit-card" style="padding-right: 5px;"></i>Payment</a>
+  <div class="dropdown">
+    <button class="download"><i class="fa fa-download" style="padding-right: 5px;"></i>Download
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#androidapp"><i class="fa fa-folder" style="padding-right: 5px;"></i>Drivers & RDservice</a>
+    </div>
+  </div> 
+  <a href="#contact"><i class="fa fa-phone" style="padding-right: 5px;"></i>Contact</a>
+
+  <a href="javascript:void(0);" style="font-size:15px; margin-top:5px;" class="icon" onclick="myFunc()">&#9776;</a>
+  
+</div>
+
+
+<script>
+function myFunc() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+ <!--navbar end--> 
+
+ <!--mfs description with image start--> 
+
+<section id="home">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-10 wow fadeIn" data-wow-delay="0.3s">
+                        <h1 class="text-upper">MFS100</h1>
+                        <p class="tm-white">
+                           OPTICAL FINGERPRINT SENSOR - STQC certified single finger scanner MFS100 is high quality USB fingerprint sensor for fingerprint authentication in desktop or network security. MFS100 is based on optical sensing technology which efficiently recognizes poor quality fingerprints also. MFS100 can be used for authentication, identification and verification functions that let your fingerprint act like digital passwords that cannot be lost, forgotten or stolen. Hard optical sensor is resistant to scratches, impact, vibration and electrostatic shock. </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!--mfs description with image end--> 
+
+
+ <!--about us start--> 
+
+<div id="aboutus">
+
+<h4 id="h4" align="center">  About US </h4>
+<br>
+<div class="text">
+
+<div id="slideshow">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+ <a target="_blank" href="images/image1.jpg"> <img src="images/image1.jpg" style="width:100%"></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+ <a target="_blank" href="images/image2.jpg"> <img src="images/image2.jpg" style="width:100%"></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <a target="_blank" href="images/image3.jpg"><img src="images/image3.jpg" style="width:100%"></a>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<div class="texting">
+<h2> About Servico </h2>
+<p> Change is a constant feature of software development. All projects have their main objective to change something. A system or its parts are upgraded, fixed, or replaced, presumably to provide better or greater functionality, ease of use, reduction of operating expenses, etc.; however, change is not universally being and must be controlled in its introduction to a Support Business.
+</p>
+<p>
+Central Support Application MANTRA SERVICO is a web-based tool developed for use by Internal Mantra department and it gives you the capabilities to generate and track the complaint regarding the devices supplied by Mantra, providing an open field of opportunity to the customers. It also allows you to monitor the total number of complaints received in particular regions and also track those complaints with its details, This application allows you to register complaints and track those state wise and district wise also Customer will get the regular update on the raised ticket via mail. </p>
+<p align="center"><a href="aboutus.html" style="text-decoration: none;  font-size: 15px; background-color:#ffcb36; color: black; border-radius: 5px; padding: 3px 15px; font-family: 'Bruno Ace SC', cursive ; ">Read more</a> </p> </div>
+</div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+
+
+ <!--about us end--> 
+
+<!-- payment start -->
+<div class="makepayment">
+        <div class="contain">
+            <h3>Fast Services Support<span>Benefits Of Technician</span></h3>
+             <h3>RD Service payment</h3>
+            <a href="payment.html" target="_blank" style="text-decoration: none;">Payment</a>
+        </div>
+    </div>
+
+
+<!-- payment end -->
+
+
+<div id="androidapp"></div>
+<div class="title">
+                <h4 id="h4">Android App</h4>
+                <h5 align="center">Download Android Mantra RD Service &amp; Management Client App</h5>
+            </div>
+
+ <!--download start--> 
+
+<div id="Download">
+<div class="Drivers">
+<div class="download-Drivers-box-app">
+                                    <img src="images/book.jpg">
+                                    <div class="box-contain">
+                                        <p class="part2">User Manual</p>
+                                        <a href="http://download.mantratecapp.com/StaticDownload/Mantra_RD_Service_Manual_Android.pdf" target="_blank" download>
+                                            <i class="fa fa-download"></i> Download
+                                        </a>
+                                    </div>
+                          </div>
+                                <div class="download-Drivers-box-app">
+                                    <img src="images/rdservice.jpg">
+                                    <div class="box-contain">
+                                        <p class="part2">Mantra RD Service</p>
+                                        <a href="https://play.google.com/store/apps/details?id=com.mantra.rdservice" target="_blank" download>
+                                            <i class="fa fa-download"></i> Download
+                                        </a>
+                                    </div>
+                                </div>
+                      
+                                <div class="download-Drivers-box-app">
+                                    <img src="images/Clientmanagement.jpeg">
+                                    <div class="box-contain">
+                                        <p class="part2">Mantra Management Client</p>
+                                        <a href="https://play.google.com/store/apps/details?id=com.mantra.clientmanagement" target="_blank" download>
+                                            <i class="fa fa-download"></i> Download
+                                        </a>
+                                    </div>
+                                </div>
+                          </div>
+
+<span id="dots"></span><span id="more">
+
+
+
+<div class="title">
+                <h4 id="h4">Windows Drivers And RD Service</h4>
+                <h5 align="center">Download Android Mantra RD Service & Management Client App</h5>
+            </div>
+
+
+ <!--first box download--> 
+
+  <div class="Drivers1  ">
+
+            <div class="panel panel-success col-md-5" style="min-height: 155px; ">
+                        <div class="panel-heading" style="background-color: #683b8a80; border-radius: 5px; padding-left:5px;"><b>WINDOWS</b> Download MFS100 RD Service</div>
+                            <div class="panel-body"><span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance (also download and install driver setup)]</span>
+                                    <div><a href="http://download.mantratecapp.com/StaticDownload/Mantra_RD_Service_Manual_Windows.pdf" target="_blank"><i class="fa fa-download" title="Download User Manual"></i>&nbsp;Download User Manual</a></div>
+                                   <div>
+                                <a href="http://download.mantratecapp.com/StaticDownload/MantraRDService_1.0.8.exe"><i class="fa fa-download" title="Download MFS100 RD Service (1.0.8)"></i>&nbsp;Download MFS100 RD Service (1.0.8) &nbsp;  </a>
+                                        </br> <a href="http://download.mantratecapp.com/StaticDownload/MFS100_ReleaseNotes_108_Windows.pdf" target="_blank"><i class="fa fa-download" title="Release Note"></i>&nbsp;Release Notes and Update Guidelines</a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 22-Dec-2022 </span>
+                             </div>
+                      </div>
+            </div>
+
+          <div class="panel panel-info col-md-5" style="min-height: 155px; ">
+                        <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;"><b>WINDOWS</b> Download MFS100 Driver</div>
+                                <div class="panel-body">
+                                    <div><a href="http://download.mantratecapp.com/StaticDownload/MFS100Driver_9.2.0.0.exe"><i class="fa fa-download" title="Download MFS100 Driver Windows XP/7/8/10"></i>&nbsp;Download MFS100 Driver (9.2.0.0) - Win 7/8/10 &nbsp; </a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 29-Apr-2022 </span>
+                                         
+                                        </br><a href="https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe"><i class="fa fa-download" title="Download Redist 2013"></i>&nbsp;Download Redist 2013 &nbsp;</a>
+                                         </br><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe"><i class="fa fa-download" title="Download Redist 2015-2022 "></i>&nbsp;Download Redist 2015-2022 &nbsp; </a>
+                                    </div>  
+                                </div>
+                        </div>
+           </div>
+
+
+ 
+ <!--second box download--> 
+
+         <div class="Drivers1 ">
+                            <div class="panel panel-success col-md-5" style="min-height: 155px;">
+                                <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b> Download MIS100V2 RD Service
+                                </div>
+                                <div class="panel-body">
+                                    <span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance (also download and install driver setup)]</span>
+                                    <div><a href="../StaticDownload/Mantra_RD_Service_MIS100V2_Manual_Windows.pdf"><i class="fa fa-download" title="Download User Manual"></i>&nbsp;Download User Manual</a></div>
+                                    <div>
+                                        <a href="../StaticDownload/MantraRDServiceIris_1.0.4.exe"><i class="fa fa-download" title="Download Mantra MIS100V2 RD Service (1.0.4)"></i>&nbsp;Download Mantra MIS100V2 RD Service (1.0.4)&nbsp;</a>
+                                        </br> <a href="../StaticDownload/MIS100V2_ReleaseNotes_104_Windows.pdf"><i class="fa fa-download" title="Release Note"></i>&nbsp;Release Notes and Update Guidelines</a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 15-Oct-2022 </span>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="panel panel-danger col-md-5" style="min-height: 155px; ">
+                                <div class="panel-heading" style="background-color: #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b> Download MIS100V2 Driver 
+                                </div>
+                                <div class="panel-body">
+
+                                    <div>
+                                        <a href="../StaticDownload/MIS100V2Driver_2.1.0.0.exe"><i class="fa fa-download" title="Download MIS100V2 Driver"></i>&nbsp;Download MIS100V2 Driver (2.1.0.0) - Win 7/8/10&nbsp; 
+                    
+                    </a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 07-Oct-2021 </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+ <!--third box download--> 
+
+         <div class="Drivers1 ">
+                            <div class="panel panel-success col-md-5" style="min-height: 155px;">
+                                <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b> Download MFS100 Client Service
+                                </div>
+                                <div class="panel-body">
+                                    <div><a href="../StaticDownload/Mantra_RD_Service_MIS100V2_Manual_Windows.pdf"><i class="fa fa-download" title="Download User Manual"></i>&nbsp;Download User Manual</a></div>
+                                    <div>
+                                        <a href="../StaticDownload/MantraRDServiceIris_1.0.4.exe"><i class="fa fa-download" title="Download MFS100 Client Service(9.0.3.8)"></i>&nbsp;Download MFS100 Client Service(9.0.3.8)&nbsp;</a>
+                                        <br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 14-Feb-2022 </span>
+                                        <br> <span style="color: red">It is recommended to install latest driver setup for dependency installation of latest Client Service.</span>
+
+
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="panel panel-danger col-md-5" style="min-height: 155px; ">
+                                <div class="panel-heading" style="background-color: #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>ANDROID</b> Download MFS100 RD Service 
+                                </div>
+                                <div class="panel-body">
+                                  <span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance]</span>
+
+                                    <div>
+                                        <a href="../StaticDownload/MIS100V2Driver_2.1.0.0.exe"><i class="fa fa-download" title="Download MFS100 RD Service (1.0.8)"></i>&nbsp; Download MFS100 RD Service (1.0.8)&nbsp;</a>
+                                        <br><a href="../StaticDownload/MIS100V2Driver_2.1.0.0.exe"><i class="fa fa-download" title="Release Notes and Update Guidelines"></i>&nbsp;  Release Notes and Update Guidelines&nbsp; </a>
+                                        <br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 22-Dec-2022  </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+ <!--fourth box download --> 
+
+
+            <div class="Drivers1 ">
+                            <div class="panel panel-success col-md-5" style="min-height: 155px; ">
+                                <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b>  Download MIDFinger Drivers 
+                                </div>
+                                <div class="panel-body">
+                                    <div>
+                                        <a href="../StaticDownload/MantraRDServiceIris_1.0.4.exe"><i class="fa fa-download" title="Download MIDFinger Drivers"></i>&nbsp;Download MIDFinger Drivers&nbsp;</a>
+                                       
+                                    </div>
+
+                                </div>
+                            </div> 
+
+                            <div class="panel panel-danger col-md-5" style="min-height: 155px; ">
+                                <div class="panel-heading" style="background-color: #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>ANDROID</b> Download MIS100V2 RD Service 
+                                </div>
+                                <div class="panel-body">
+                                  <span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance]</span>
+
+                                    <div>
+                                        <a href="../StaticDownload/MIS100V2Driver_2.1.0.0.exe"><i class="fa fa-download" title=" Download MIS100V2 RD Service (1.0.4)"></i>&nbsp;Download MIS100V2 RD Service (1.0.4) &nbsp; </a>
+                                         <br><a href="../StaticDownload/MIS100V2Driver_2.1.0.0.exe"><i class="fa fa-download" title="Release Notes and Update Guidelines"></i>&nbsp;Release Notes and Update Guidelines&nbsp; </a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 07-Oct-2021 </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+ <!--fifth box download--> 
+ 
+                <div class="Drivers1 ">
+                             <div class="panel panel-success col-md-5" style="min-height: 155px;">
+                                <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b> Download MFS110 RD Service 
+                                </div>
+                                <div class="panel-body">
+                                    <span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance (also download and install driver setup)]</span>
+                                    <div><a href="../StaticDownload/Mantra_RD_Service_MIS100V2_Manual_Windows.pdf"><i class="fa fa-download" title="Download User Manual"></i>&nbsp;Download User Manual</a></div>
+                                    <div>
+                                        <a href="../StaticDownload/MantraRDServiceIris_1.0.4.exe"><i class="fa fa-download" title="Download Mantra MIS100V2 RD Service (1.0.4)"></i>&nbsp;Download MFS110 RD Service (1.0.2)&nbsp;</a>
+                                   
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 22-Dec-2022  </span>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="panel panel-danger col-md-5" style="min-height: 155px; ">
+                                <div class="panel-heading" style="background-color: #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>WINDOWS</b> Download MFS110 Driver
+                                </div>
+                                <div class="panel-body">
+                                  <div><a href="http://download.mantratecapp.com/StaticDownload/MFS100Driver_9.2.0.0.exe"><i class="fa fa-download" title=" Download MFS110 Driver (1.1.0.0) - Win 10"></i>&nbsp;Download MFS110 Driver (1.1.0.0) - Win 10  &nbsp; </a>
+                                        </br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 29-Apr-2022 </span>
+                                         
+                                        </br><a href="https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe"><i class="fa fa-download" title="Download Redist 2013"></i>&nbsp;Download Redist 2013 &nbsp;</a>
+                                         </br><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe"><i class="fa fa-download" title="Download Redist 2015-2022 "></i>&nbsp;Download Redist 2015-2022 &nbsp; </a>
+                                    </div>  
+
+                                   
+
+                                </div>
+                            </div>
+                       </div>
+
+ <!--sixth box download--> 
+                     
+                <div class="Drivers1 Driver1a">
+                            <div class="panel panel-success col-md-5" style="min-height: 155px;">
+                                    <div class="panel-heading" style="background-color:  #683b8a80; border-radius: 5px; padding-left:5px;">
+                                    <b>ANDROID</b> Download MFS110 RD Service </div>
+                                <div class="panel-body">
+                                      <span style="color: red">[Aadhaar auth API 2.5 and E-Kyc API 2.5 compliance (also download and install driver setup)]</span>
+                                      <div><a href="../StaticDownload/Mantra_RD_Service_MIS100V2_Manual_Windows.pdf"><i class="fa fa-download" title="Download User Manual"></i>&nbsp;Download User Manual</a></div>
+                                    
+                                        <a href="../StaticDownload/MantraRDServiceIris_1.0.4.exe"><i class="fa fa-download" title="Download Mantra MIS100V2 RD Service (1.0.4)"></i>&nbsp;Download MFS110 RD Service (1.0.2)&nbsp;</a>
+                                   
+                                        <br><span style="color: black; font-size: 12px; font-weight: bold">Last Uploaded on 22-Dec-2022  </span>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+
+</div>
+
+</span>
+<center><button class="readmore" onclick="myFunction()" id="myBtn">Click here for Windows Drivers & RDservice</button><center>
+
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Click here for Windows Drivers & RDservice"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "close"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+ <!-- download end--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- footer end--> 
+
+
+<footer>
+
+
+<div class="wrapper">
+  <a href="#" class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span><i class="fab fa-facebook-f"></i></span>
+  </a>
+  <a href="#" class="icon twitter">
+    <div class="tooltip">Twitter</div>
+    <span><i class="fab fa-twitter"></i></span>
+  </a>
+  <a href="#" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><i class="fab fa-instagram"></i></span>
+  </a>
+
+  <a href="#" class="icon youtube">
+    <div class="tooltip">Youtube</div>
+    <span><i class="fab fa-youtube"></i></span>
+  </a>
+
+  <a href="#" class="icon nightmode">
+    <div class="tooltip">Nightmode</div>
+    <span onclick="nightfunction()"><i class="fa fa-moon-o"></i></span>
+  </a>
+</div>
+
+<div>
+
+Copyright © 2023 Mantra Softech(I) Pvt. Ltd.
+
+</div>
+
+ <!--nightmode script--> 
+<script>
+function nightfunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</footer>
+
+ <!--footer end--> 
+
+
+
+
+
+</body>
+</html>
