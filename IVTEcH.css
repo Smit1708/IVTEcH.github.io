@@ -120,7 +120,7 @@ float: right;
 /* start home */       
 #home
     {
-    background:  linear-gradient(to left, rgba(13, 35, 235, 0.5), rgba(12, 44, 104, 0.8)),  url('images/fingerprint.jpeg') no-repeat;
+    background:linear-gradient(to left, rgba(13, 35, 235, 0.5), rgba(12, 44, 104, 0.8)), url('images/fingerprint.jpeg') no-repeat;
     background-size: cover;
     color: #fff;
     margin-top: 5px;
