@@ -529,14 +529,7 @@ body {
   color: black;
   margin: 0;
 }
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-.dark-mode1 {
-  background-color: black;
-  color: white;
-}
+
 
 footer{/home/smit_limbachiya/smitfiles html/images
   text-align: center;
@@ -620,12 +613,6 @@ margin: 10px;
 .wrapper .youtube:hover .tooltip::before {
   background-color: #de463b;
   color: #ffffff;
-}
-.wrapper .nightmode:hover,
-.wrapper .nightmode:hover .tooltip,
-.wrapper .nightmode:hover .tooltip::before {
-  background-color: ghostwhite;
-  color: black;
 }
 
 /*footer end*/
